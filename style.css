@@ -30,3 +30,11 @@ footer{display:flex;justify-content:center;align-items:center;gap:22px;padding:1
 @media(max-width:850px){.topbar{gap:20px}.nav{gap:16px}.nav-link{font-size:9px;letter-spacing:.12em}.socials{gap:14px}.side-quote{font-size:14px}.collections{grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px}.collection-card{min-height:270px}.hero{min-height:465px}.extras{max-width:620px}}
 @media(max-width:600px){.topbar{height:68px;padding:0 20px}.nav{display:none;position:absolute;left:12px;right:12px;top:61px;padding:20px;background:#050a13f5;border:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:8px}.nav.open{display:flex}.nav-link{font-size:11px}.socials{gap:13px}.socials a{font-size:0}.socials a:first-child:before{content:"♪";font-size:22px}.socials a:nth-child(2):before{content:"☻";font-size:22px}.star-button{font-size:23px}.menu-toggle{display:block;font-size:20px}.hero{height:auto;min-height:500px;padding:30px 0 42px}.portrait-ring{width:130px;height:130px}.portrait{width:98px;height:98px}.side-quote{top:auto;bottom:20px;font-size:12px}.quote-left{left:0}.quote-right{right:0}.side-quote span{margin-top:7px}.hero-actions{gap:10px}.pill{min-width:0;padding:11px 14px;gap:9px;font-size:13px}.rule{width:230px}.collections{gap:13px}.collection-card{min-height:245px;padding:0 10px 15px}.card-image{inset:0 0 88px}.card-title{font-size:16px;letter-spacing:.12em}.card-description{font-size:12px}.card-icon{font-size:25px}.extras{grid-template-columns:1fr}.preview-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.preview-thumb{height:100px}.spell-list{grid-template-columns:1fr}.modal{padding:28px 20px}.diary-page{padding:15px 3%;min-height:320px}.diary-page p:not(.eyebrow){font-size:18px}footer{font-size:7px;gap:12px;letter-spacing:.15em}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(0.7);
+  display: block;
+}
