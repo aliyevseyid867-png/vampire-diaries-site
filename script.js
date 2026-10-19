@@ -160,43 +160,4 @@ $("#soundToggle").addEventListener("click", () => {
   $("#soundToggle").title = ambienceOn ? "Pause ambience" : "Resume ambience";
   if (!ambienceOn) { batLayer.replaceChildren(); emberLayer.replaceChildren(); }
 });
-#bats-bg {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 5;
-}
 
-.flying-bat {
-  position: absolute;
-  left: -100px;
-  color: #000;
-  width: 42px;
-  height: 28px;
-  animation: bat-fly linear infinite;
-  will-change: transform;
-}
-
-.flying-bat svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  fill: #000;
-}
-
-@keyframes bat-fly {
-  from {
-    transform: translateX(-100px) rotate(-8deg);
-  }
-  to {
-    transform: translateX(calc(100vw + 150px)) rotate(8deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .flying-bat {
-    animation: none;
-    display: none;
-  }
-}
