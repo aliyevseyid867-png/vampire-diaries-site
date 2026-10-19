@@ -161,7 +161,8 @@ $("#soundToggle").addEventListener("click", () => {
   if (!ambienceOn) { batLayer.replaceChildren(); emberLayer.replaceChildren(); }
 });
 const batContainer = document.getElementById("bats-bg");
-if (batContainer) { const batShape =  <svg viewBox="0 0 64 40" aria-hidden="true"> <path d="M32 13 C26 3 18 1 10 4 L13 13 2 8 C3 21 11 28 23 25 L29 20 30 30 25 37 32 34 39 37 34 30 35 20 41 25 C53 28 61 21 62 8 L51 13 54 4 C46 1 38 3 32 13Z"/> </svg>;
-for (let i = 0; i < 9; i++) { const bat = document.createElement("div"); bat.className = "flying-bat"; bat.innerHTML = batShape; bat.style.top = ${8 + Math.random() * 82}%; bat.style.animationDuration = ${12 + Math.random() * 15}s; bat.style.animationDelay = ${-Math.random() * 25}s; bat.style.width = ${24 + Math.random() * 25}px;
-batContainer.appendChild(bat);
+if (batContainer) { batContainer.innerHTML = "";
+const crowSVG =  <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg"> <g class="crow-wings" fill="#000"> <path d="M60 34 C45 20 26 5 2 7 L18 19 5 17 24 29 13 28 36 39 50 42Z"/> <path d="M60 34 C75 20 94 5 118 7 L102 19 115 17 96 29 107 28 84 39 70 42Z"/> </g> <path fill="#000" d="M48 35 Q58 27 70 34 L84 39 70 40 66 51 60 45 54 51 52 41 40 40Z"/> <path fill="#000" d="M67 34 L84 31 75 38Z"/> </svg>;
+for (let i = 0; i < 7; i++) { const crow = document.createElement("div"); crow.className = "flying-bat crow"; crow.innerHTML = crowSVG; crow.style.top = ${8 + Math.random() * 75}%; crow.style.animationDuration = ${9 + Math.random() * 12}s; crow.style.animationDelay = ${-Math.random() * 15}s; crow.style.width = ${45 + Math.random() * 35}px;
+batContainer.appendChild(crow);
 } }
