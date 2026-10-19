@@ -96,12 +96,4 @@ footer{display:flex;justify-content:center;align-items:center;gap:22px;padding:1
   opacity: 1;
 }
 }
-#crow-video {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  z-index: 5;
-}
+
