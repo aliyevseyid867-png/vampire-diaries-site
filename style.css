@@ -70,7 +70,12 @@ footer{display:flex;justify-content:center;align-items:center;gap:22px;padding:1
 .crow svg {
   overflow: visible;
 }
-
+.crow svg {
+  overflow: visible;
+}
+.crow svg {
+  overflow: visible;
+}
 .crow .crow-wings {
   transform-box: fill-box;
   transform-origin: center;
@@ -89,4 +94,5 @@ footer{display:flex;justify-content:center;align-items:center;gap:22px;padding:1
 .flying-bat {
   filter: none;
   opacity: 1;
+}
 }
