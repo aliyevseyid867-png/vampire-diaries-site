@@ -160,39 +160,3 @@ $("#soundToggle").addEventListener("click", () => {
   $("#soundToggle").title = ambienceOn ? "Pause ambience" : "Resume ambience";
   if (!ambienceOn) { batLayer.replaceChildren(); emberLayer.replaceChildren(); }
 });
-const batContainer = document.getElementById("bats-bg");
-
-if (batContainer) {
-  batContainer.innerHTML = "";
-
-  const crowSVG = `
-    <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-      <g class="crow-wings" fill="#000">
-        <path d="M60 34
-          C45 20 26 5 2 7
-          L18 19 5 17 24 29 13 28
-          36 39 50 42Z"/>
-        <path d="M60 34
-          C75 20 94 5 118 7
-          L102 19 115 17 96 29 107 28
-          84 39 70 42Z"/>
-      </g>
-      <path fill="#000" d="M48 35
-        Q58 27 70 34 L84 39 70 40
-        66 51 60 45 54 51 52 41
-        40 40Z"/>
-      <path fill="#000" d="M67 34 L84 31 75 38Z"/>
-    </svg>`;
-
-  for (let i = 0; i < 7; i++) {
-    const crow = document.createElement("div");
-    crow.className = "flying-bat crow";
-    crow.innerHTML = crowSVG;
-    crow.style.top = `${8 + Math.random() * 75}%`;
-    crow.style.animationDuration = `${9 + Math.random() * 12}s`;
-    crow.style.animationDelay = `${-Math.random() * 15}s`;
-    crow.style.width = `${45 + Math.random() * 35}px`;
-
-    batContainer.appendChild(crow);
-  }
-}
