@@ -1,13 +1,13 @@
 :root{--ink:#03060c;--blue:#91baff;--blue-dim:#4c78b8;--paper:#dce5f4;--muted:#9ca9bf;--line:rgba(133,177,242,.42);--serif:"Cormorant Garamond",Georgia,serif;--sans:Montserrat,Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-color:#243b5c #03060c}body{margin:0;min-height:100vh;background:#03060c;color:var(--paper);font-family:var(--serif);overflow-x:hidden}
-body:before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -5;
-  background:
-    linear-gradient(rgba(2, 4, 10, 0.55), rgba(2, 4, 10, 0.72)),
-    url("background.png") center center / cover no-repeat fixed;
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(rgba(2,4,10,.55), rgba(2,4,10,.72)),
+              url("background.jpg") center center / cover no-repeat fixed;
+  color: var(--paper);
+  font-family: var(--serif);
+  overflow-x: hidden;
 }
 body:after{content:"";position:fixed;inset:0;z-index:8;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E")}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}.ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1}.moon-haze{position:absolute;width:42vw;height:42vw;left:30%;top:8%;border-radius:50%;background:radial-gradient(circle,rgba(75,108,155,.12),transparent 68%);filter:blur(18px);animation:haze 14s ease-in-out infinite alternate}
