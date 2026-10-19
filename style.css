@@ -67,19 +67,26 @@ footer{display:flex;justify-content:center;align-items:center;gap:22px;padding:1
   height: 100%;
   fill: #000;
 }
+.crow svg {
+  overflow: visible;
+}
 
-@keyframes bat-fly {
+.crow .crow-wings {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: crow-flap 0.35s ease-in-out infinite alternate;
+}
+
+@keyframes crow-flap {
   from {
-    transform: translateX(-100px) rotate(-8deg);
+    transform: scaleY(0.45);
   }
   to {
-    transform: translateX(calc(100vw + 150px)) rotate(8deg);
+    transform: scaleY(1);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .flying-bat {
-    animation: none;
-    display: none;
-  }
+.flying-bat {
+  filter: none;
+  opacity: 1;
 }
