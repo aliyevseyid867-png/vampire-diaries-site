@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#03060c">
+  <title>aepsald — edit creator</title>
+  <meta name="description" content="Edits, color corrections, projects and resources by aepsald.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="moon-haze"></div><div class="mist mist-one"></div><div class="mist mist-two"></div>
+    <div class="bats" id="bats"></div><div class="embers" id="embers"></div>
+  </div>
+  <header class="topbar">
+    <a class="wordmark-mini" href="#home" aria-label="Aepsald home">A<span>✦</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#collections">Edits</a>
+      <a class="nav-link" href="#collections">Projects</a><a class="nav-link" href="#collections">CC</a>
+      <a class="nav-link" href="#collections">Edit pack</a>
+    </nav>
+    <div class="socials"><a href="#" data-link="tiktok">♪ TikTok ↗</a><a href="#" data-link="discord">☻ Discord ↗</a><button class="star-button" id="soundToggle" aria-label="Toggle ambience" title="Toggle ambience">✧</button></div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <p class="side-quote quote-left">“you're<br>not the villain<br>in my story”<span>✦</span></p>
+      <p class="side-quote quote-right">some people<br>are worth<br>the danger<span>✦</span></p>
+      <div class="hero-center">
+        <div class="portrait-ring"><div class="portrait" id="portrait">a.</div><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="orbit-star">✦</span></div>
+        <h1>aepsald</h1><p class="eyebrow">E D I T &nbsp; C R E A T O R</p>
+        <p class="tagline">“turning moments into memories”</p>
+        <div class="rule"><span>✦</span></div>
+        <div class="hero-actions"><a class="pill" href="#" data-link="tiktok"><span class="social-icon">♪</span> TikTok <b>→</b></a><a class="pill" href="#" data-link="discord"><span class="social-icon">☻</span> Discord <b>→</b></a></div>
+      </div>
+    </section>
+
+    <section class="collections" id="collections" aria-label="Collections">
+      <button class="collection-card" data-category="edits">
+        <span class="card-image image-edits"><span class="image-caption">SCENE / 001</span></span>
+        <span class="card-icon">♟</span><span class="card-title">Edits</span><span class="card-description">My best edits, all in one place.</span><span class="card-arrow">→</span>
+      </button>
+      <button class="collection-card" data-category="cc">
+        <span class="card-image image-cc"><span class="image-caption">COLOUR / 002</span></span>
+        <span class="card-icon">♜</span><span class="card-title">CC</span><span class="card-description">My color corrections<br>and colorings.</span><span class="card-arrow">→</span>
+      </button>
+      <button class="collection-card" data-category="projects">
+        <span class="card-image image-projects"><span class="image-caption">WORKSPACE / 003</span></span>
+        <span class="card-icon">⚜</span><span class="card-title">Projects</span><span class="card-description">AE projects, presets<br>and more.</span><span class="card-arrow">→</span>
+      </button>
+      <button class="collection-card" data-category="packs">
+        <span class="card-image image-packs"><span class="image-caption">RESOURCES / 004</span></span>
+        <span class="card-icon">▤</span><span class="card-title">Edit pack</span><span class="card-description">Resources for<br>your edits.</span><span class="card-arrow">→</span>
+      </button>
+    </section>
+
+    <section class="extras">
+      <button class="extra-link" id="diaryOpen"><span class="extra-symbol">✧</span><span><strong>The private journal</strong><small>Some pages were never meant to be found.</small></span><b>↗</b></button>
+      <button class="extra-link" id="grimoireOpen"><span class="extra-symbol">☾</span><span><strong>The grimoire</strong><small>Little secrets, presets &amp; things worth keeping.</small></span><b>↗</b></button>
+    </section>
+    <footer><span>MADE OF MIDNIGHT &amp; MEMORY</span><span class="footer-star">✦</span><span>© <span id="year"></span> AEPSALD</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="collectionModal" aria-hidden="true">
+    <section class="modal collection-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-modal" data-close aria-label="Close">×</button>
+      <p class="eyebrow">THE ARCHIVE</p><h2 id="modalTitle">Edits</h2><p class="modal-intro" id="modalIntro">A collection of moments kept alive.</p>
+      <div class="preview-grid" id="previewGrid"></div>
+      <p class="modal-note">Replace the sample entries in <code>script.js</code> with your own links and thumbnails.</p>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="diaryModal" aria-hidden="true">
+    <section class="modal diary-modal" role="dialog" aria-modal="true" aria-labelledby="diaryTitle">
+      <button class="close-modal" data-close aria-label="Close">×</button>
+      <div class="diary-top"><span>PERSONAL ARCHIVE · VOL. I</span><span id="pageCount">PAGE 01 / 03</span></div>
+      <div class="diary-page" id="diaryPage"><p class="eyebrow">19 OCTOBER</p><h2 id="diaryTitle">Dear midnight,</h2><p id="diaryText">Some moments fade. Others settle under your skin and become part of the person you are. This little book is for the scenes, sounds, and feelings I want to keep.</p><span class="signature">— a.</span></div>
+      <div class="diary-controls"><button id="prevPage" disabled>← Previous</button><span>✦</span><button id="nextPage">Turn the page →</button></div>
+    </section>
+  </div>
+
+  <div class="modal-backdrop" id="grimoireModal" aria-hidden="true">
+    <section class="modal grimoire-modal" role="dialog" aria-modal="true" aria-labelledby="grimoireTitle">
+      <button class="close-modal" data-close aria-label="Close">×</button><p class="eyebrow">A SMALL BOOK OF SECRETS</p><h2 id="grimoireTitle">The Grimoire</h2>
+      <div class="spell-list"><article><span>01 / COLOUR</span><h3>Blue hour</h3><p>A cold midnight grade, softened blacks, silver highlights.</p></article><article><span>02 / MOTION</span><h3>Ghost frame</h3><p>Slow shutter trails, restrained blur, and a little breathing room.</p></article><article><span>03 / NOTE</span><h3>Keep it human</h3><p>Imperfections are part of the atmosphere. Don't polish the life out of a scene.</p></article></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
