@@ -160,4 +160,8 @@ $("#soundToggle").addEventListener("click", () => {
   $("#soundToggle").title = ambienceOn ? "Pause ambience" : "Resume ambience";
   if (!ambienceOn) { batLayer.replaceChildren(); emberLayer.replaceChildren(); }
 });
-
+const batContainer = document.getElementById("bats-bg");
+if (batContainer) { const batShape =  <svg viewBox="0 0 64 40" aria-hidden="true"> <path d="M32 13 C26 3 18 1 10 4 L13 13 2 8 C3 21 11 28 23 25 L29 20 30 30 25 37 32 34 39 37 34 30 35 20 41 25 C53 28 61 21 62 8 L51 13 54 4 C46 1 38 3 32 13Z"/> </svg>;
+for (let i = 0; i < 9; i++) { const bat = document.createElement("div"); bat.className = "flying-bat"; bat.innerHTML = batShape; bat.style.top = ${8 + Math.random() * 82}%; bat.style.animationDuration = ${12 + Math.random() * 15}s; bat.style.animationDelay = ${-Math.random() * 25}s; bat.style.width = ${24 + Math.random() * 25}px;
+batContainer.appendChild(bat);
+} }
